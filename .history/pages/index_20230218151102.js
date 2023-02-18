@@ -7,10 +7,11 @@ import Link from 'next/link'
 
 
 export default function Home() {
-  var name = process.env.NEXT_PUBLIC_API_KEY;
+  var name = process.env.NEXT_PUBLIC_API_KEY;c
   const [data, setData] = useState();
 
-  const url = `https://api.nasa.gov/techtransfer/patent/?q=10&engine&api_key=${name}`
+  const apiKey = "BKu0nr7SnBGOqKTSgWfcyr59UwXtwa7g3dY4YQrC";
+  const url = `https://api.nasa.gov/techtransfer/patent/?q=10&engine&api_key=${apiKey}`
 
   const getTechTransferData = async () => {
     const res = await axios.get(url);
